@@ -1,4 +1,4 @@
-import Text, { Props as TextProps } from '@atoms/Text';
+import Text from '@atoms/Text';
 
 type Props = {
   title: string;

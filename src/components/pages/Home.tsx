@@ -6,7 +6,6 @@ import ErrorMessage from '@molecules/ErrorMessage';
 import Board from '@organism/Board';
 import TaskModal from '@organism/TaskModal';
 import ListingTemplate from '@templates/ListingTemplate';
-import { useRef } from 'react';
 
 import homeLanesOrderData from '@/constants/homeLanesData';
 import { ADD_TASK, DELETE_TASK, GET_ALL_TASKS } from '@/graphql/tasks';
@@ -19,8 +18,10 @@ import {
 } from '@/types/tasks';
 
 const Home = () => {
+  const { isOpen, onClose, onOpen } = useDisclosure();
   const { data, loading, error, refetch } =
     useQuery<GetAllTaskQueryResult>(GET_ALL_TASKS);
+
   const [addTodo, { loading: addTaskLoading }] = useMutation<
     AddTaskMutationResult,
     AddTaskMutationArgs
@@ -30,10 +31,7 @@ const Home = () => {
     DELETE_TASK,
   );
 
-  const boardContainerRef = useRef(null);
-
   const isEmpty = data && data.tasks.length === 0;
-  const { isOpen, onClose, onOpen } = useDisclosure();
 
   const handleDeleteTask = async (id: string) => {
     await deleteTask({ variables: { task: { id } } });
@@ -57,12 +55,7 @@ const Home = () => {
         />
       )}
       <ListingTemplate onAddClick={onOpen}>
-        <Box
-          w="calc(100vw - 350px)"
-          h="calc(100vh - 200px)"
-          overflow="auto"
-          ref={boardContainerRef}
-        >
+        <Box w="calc(100vw - 350px)" h="calc(100vh - 200px)" overflow="auto">
           {loading && <LoadingIcon mx="auto" display="block" />}
 
           {error && (

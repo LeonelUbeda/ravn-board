@@ -1,7 +1,6 @@
-import { Fragment } from 'react';
-
 import { Grid, GridItem } from '@chakra-ui/react';
 import Card from '@organism/Card';
+import { Fragment } from 'react';
 
 import { Task } from '@/types/tasks';
 
@@ -28,10 +27,7 @@ const Board = ({ lanes, onDelete }: Props) => {
               <LaneHeader title={lane.title} totalCards={lane.cards.length} />
             </GridItem>
             {lane.cards.map(
-              (
-                { assignee, dueDate, name, pointEstimate, tags, id, status },
-                cardIndex,
-              ) => (
+              ({ assignee, dueDate, name, pointEstimate, tags, id }, cardIndex) => (
                 <GridItem
                   key={id}
                   colStart={laneIndex + 1}
@@ -40,7 +36,11 @@ const Board = ({ lanes, onDelete }: Props) => {
                 >
                   <Card
                     onDelete={() => onDelete && onDelete(id)}
-                    {...{ assignee, dueDate, name, pointEstimate, tags, status }}
+                    assignee={assignee}
+                    dueDate={dueDate}
+                    name={name}
+                    pointEstimate={pointEstimate}
+                    tags={tags}
                   />
                 </GridItem>
               ),

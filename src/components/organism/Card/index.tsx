@@ -1,7 +1,7 @@
 import Button from '@atoms/Button';
 import { Menu, MenuButton, MenuItem, MenuList } from '@atoms/Menu';
 import Text from '@atoms/Text';
-import { Avatar, Box, HStack, Icon, Stack } from '@chakra-ui/react';
+import { Avatar, Box, HStack, Stack } from '@chakra-ui/react';
 import Badge from '@molecules/Badge';
 import parseISO from 'date-fns/parseISO';
 import { RiDeleteBin6Line, RiMoreLine } from 'react-icons/ri';
@@ -16,18 +16,10 @@ import ReactionIcon from './ReactionIcon';
 
 type Props = { onDelete?: () => void } & Pick<
   Task,
-  'name' | 'assignee' | 'dueDate' | 'pointEstimate' | 'tags' | 'status'
+  'name' | 'assignee' | 'dueDate' | 'pointEstimate' | 'tags'
 >;
 
-const Card = ({
-  status,
-  name,
-  assignee,
-  dueDate,
-  pointEstimate,
-  tags,
-  onDelete,
-}: Props) => {
+const Card = ({ name, assignee, dueDate, pointEstimate, tags, onDelete }: Props) => {
   return (
     <Stack spacing="4" bgColor="neutral.400" borderRadius="md" p="4" h="full">
       <Box display="flex" alignItems="center">
