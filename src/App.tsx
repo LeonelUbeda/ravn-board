@@ -1,10 +1,12 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import Home from '@pages/Home';
-import theme from './theme';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Tasks from '@pages/Tasks';
 import './App.css';
 import 'react-datepicker/dist/react-datepicker.css';
+
+import { ChakraProvider } from '@chakra-ui/react';
+import Home from '@pages/Home';
+import Tasks from '@pages/Tasks';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import theme from './theme';
 
 function App() {
   return (

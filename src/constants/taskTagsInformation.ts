@@ -1,4 +1,5 @@
 import TaskTag from '@/enums/taskTag';
+
 import { BadgeColor } from './badgeColorSchemes';
 
 type Tags = {

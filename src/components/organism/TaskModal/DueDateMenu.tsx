@@ -1,9 +1,10 @@
-import { getHumanReadableDate } from '@/utils/date';
 import Button from '@atoms/Button';
-import { MenuButton, Menu, MenuList, MenuItem } from '@atoms/Menu';
+import { Menu, MenuButton, MenuItem, MenuList } from '@atoms/Menu';
 import { Icon } from '@chakra-ui/react';
 import DatePicker from 'react-datepicker';
 import { RiCalendarCheckLine } from 'react-icons/ri';
+
+import { getHumanReadableDate } from '@/utils/date';
 
 type Props = { selected?: Date; onChange: (date: Date) => void };
 

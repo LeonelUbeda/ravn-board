@@ -1,19 +1,19 @@
-import Estimate from '@/enums/estimate';
+import TaskEstimate from '@/enums/taskEstimate';
 
 const estimateInformation = {
-  [Estimate.ZERO]: {
+  [TaskEstimate.ZERO]: {
     title: '0 Points',
   },
-  [Estimate.ONE]: {
+  [TaskEstimate.ONE]: {
     title: '1 Points',
   },
-  [Estimate.TWO]: {
+  [TaskEstimate.TWO]: {
     title: '2 Points',
   },
-  [Estimate.FOUR]: {
+  [TaskEstimate.FOUR]: {
     title: '4 Points',
   },
-  [Estimate.EIGHT]: {
+  [TaskEstimate.EIGHT]: {
     title: '8 Points',
   },
 };

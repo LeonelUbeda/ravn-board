@@ -1,4 +1,5 @@
 import TaskStatus from '@/enums/taskStatus';
+
 import taskStatusInformation from './taskStatusInformation';
 
 const homeLanesOrderData = [

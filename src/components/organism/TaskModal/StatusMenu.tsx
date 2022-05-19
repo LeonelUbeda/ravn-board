@@ -1,9 +1,11 @@
 import Button from '@atoms/Button';
 import { Menu, MenuButton, MenuItem, MenuList } from '@atoms/Menu';
 import Text from '@atoms/Text';
-import TitleMenu from './TitleMenu';
+
 import taskStatusInformation from '@/constants/taskStatusInformation';
 import TaskStatus from '@/enums/taskStatus';
+
+import TitleMenu from './TitleMenu';
 
 type Props = {
   onSelect: (estimate: TaskStatus) => void;

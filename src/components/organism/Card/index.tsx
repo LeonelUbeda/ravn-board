@@ -1,13 +1,15 @@
-import estimateInformation from '@/constants/estimatesInformation';
-import taskTagsInformation from '@/constants/taskTagsInformation';
-import { Task } from '@/types/tasks';
 import Button from '@atoms/Button';
-import { MenuButton, Menu, MenuList, MenuItem } from '@atoms/Menu';
+import { Menu, MenuButton, MenuItem, MenuList } from '@atoms/Menu';
 import Text from '@atoms/Text';
 import { Avatar, Box, HStack, Icon, Stack } from '@chakra-ui/react';
 import Badge from '@molecules/Badge';
 import parseISO from 'date-fns/parseISO';
 import { RiDeleteBin6Line, RiMoreLine } from 'react-icons/ri';
+
+import taskEstimatesInformation from '@/constants/taskEstimatesInformation';
+import taskTagsInformation from '@/constants/taskTagsInformation';
+import { Task } from '@/types/tasks';
+
 import CardIcon from './CardIcon';
 import DateIndicator from './DateIndicator';
 import ReactionIcon from './ReactionIcon';
@@ -43,7 +45,7 @@ const Card = ({
         </Menu>
       </Box>
       <Box display="flex" alignItems="center">
-        <Text size="l">{estimateInformation[pointEstimate].title}</Text>
+        <Text size="l">{taskEstimatesInformation[pointEstimate].title}</Text>
         <DateIndicator date={parseISO(dueDate)} />
       </Box>
       <Box display="flex" flexWrap="wrap" gap="2">

@@ -1,9 +1,11 @@
-import { Avatar, Box, Icon } from '@chakra-ui/react';
 import Button from '@atoms/Button';
 import { Menu, MenuButton, MenuItem, MenuList } from '@atoms/Menu';
-import { RiUser3Fill } from 'react-icons/ri';
-import { Users } from '@/types/user';
 import Text from '@atoms/Text';
+import { Avatar, Box, Icon } from '@chakra-ui/react';
+import { RiUser3Fill } from 'react-icons/ri';
+
+import { Users } from '@/types/user';
+
 import TitleMenu from './TitleMenu';
 
 type Props = {

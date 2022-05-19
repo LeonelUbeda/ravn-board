@@ -1,8 +1,9 @@
-import { BadgeColor } from '@/constants/badgeColorSchemes';
-import { getHumanReadableDate } from '@/utils/date';
 import Badge from '@molecules/Badge';
 import { differenceInDays } from 'date-fns';
 import { RiTimerLine } from 'react-icons/ri';
+
+import { BadgeColor } from '@/constants/badgeColorSchemes';
+import { getHumanReadableDate } from '@/utils/date';
 
 type Props = {
   date: Date;

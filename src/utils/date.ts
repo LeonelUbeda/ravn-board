@@ -1,5 +1,5 @@
 import { differenceInDays, format, set } from 'date-fns';
-import { enUS } from 'date-fns/locale';
+import enUS from 'date-fns/locale/en-US';
 
 export const getHumanReadableDate = (date: Date) => {
   const differenceInDaysFromToday = differenceInDays(

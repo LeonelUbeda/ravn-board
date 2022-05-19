@@ -1,4 +1,4 @@
-enum Estimate {
+enum TaskEstimate {
   ZERO = 'ZERO',
   ONE = 'ONE',
   TWO = 'TWO',
@@ -6,4 +6,4 @@ enum Estimate {
   EIGHT = 'EIGHT',
 }
 
-export default Estimate;
+export default TaskEstimate;

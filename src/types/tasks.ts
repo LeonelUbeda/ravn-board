@@ -1,11 +1,11 @@
-import Estimate from '@/enums/estimate';
+import TaskEstimate from '@/enums/taskEstimate';
 import TaskStatus from '@/enums/taskStatus';
 import TaskTag from '@/enums/taskTag';
 
 export type Task = {
   tags: Array<TaskTag>;
   name: string;
-  pointEstimate: Estimate;
+  pointEstimate: TaskEstimate;
   dueDate: string;
   id: string;
   status: TaskStatus;
@@ -26,7 +26,7 @@ export type BasicTask = {
   assigneeId: string;
   dueDate: Date;
   name: string;
-  pointEstimate: Estimate;
+  pointEstimate: TaskEstimate;
   status: TaskStatus;
   tags: Array<TaskTag>;
 };

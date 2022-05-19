@@ -1,11 +1,13 @@
-import { Icon } from '@chakra-ui/react';
 import Button from '@atoms/Button';
-import { Menu, MenuButton, MenuList, MenuItemOption, MenuOptionGroup } from '@atoms/Menu';
+import { Menu, MenuButton, MenuItemOption, MenuList, MenuOptionGroup } from '@atoms/Menu';
+import Text from '@atoms/Text';
+import { Icon } from '@chakra-ui/react';
 import { RiPriceTag3Fill } from 'react-icons/ri';
-import TitleMenu from './TitleMenu';
+
 import taskTagsInformation from '@/constants/taskTagsInformation';
 import TaskTag from '@/enums/taskTag';
-import Text from '@atoms/Text';
+
+import TitleMenu from './TitleMenu';
 
 type Props = {
   onChange: (estimate: Array<TaskTag>) => void;
@@ -28,7 +30,7 @@ const TagsMenu = ({ onChange, selected = [] }: Props) => {
       </MenuButton>
       <MenuList minWidth="fit-content">
         <TitleMenu text="Tag Title" />
-        <MenuOptionGroup type="checkbox" onChange={(value) => console.log(value)}>
+        <MenuOptionGroup type="checkbox">
           {Object.keys(taskTagsInformation).map((tag) => (
             <MenuItemOption
               closeOnSelect={false}

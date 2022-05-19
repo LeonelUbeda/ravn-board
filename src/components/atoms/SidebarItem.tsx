@@ -1,4 +1,4 @@
-import { Box, Icon, BoxProps } from '@chakra-ui/react';
+import { Box, BoxProps, Icon } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 import { Link } from 'react-router-dom';
 

@@ -1,25 +1,27 @@
-import { useState } from 'react';
+import { useQuery } from '@apollo/client';
+import Button from '@atoms/Button';
 import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  Input,
   HStack,
+  Input,
+  Modal,
+  ModalContent,
+  ModalOverlay,
   Stack,
 } from '@chakra-ui/react';
-import Button from '@atoms/Button';
-import EstimateMenu from './EstimateMenu';
-import Estimate from '@/enums/estimate';
-import AssigneeMenu from './AssigneeMenu';
-import { useQuery } from '@apollo/client';
-import { GET_USERS } from '@/graphql/users';
-import { UsersData } from '@/types/user';
-import TagsMenu from './TagsMenu';
-import TaskTag from '@/enums/taskTag';
-import DueDateMenu from './DueDateMenu';
-import { BasicTask } from '@/types/tasks';
+import { useState } from 'react';
+
+import TaskEstimate from '@/enums/taskEstimate';
 import TaskStatus from '@/enums/taskStatus';
+import TaskTag from '@/enums/taskTag';
+import { GET_USERS } from '@/graphql/users';
+import { BasicTask } from '@/types/tasks';
+import { UsersData } from '@/types/user';
+
+import AssigneeMenu from './AssigneeMenu';
+import DueDateMenu from './DueDateMenu';
+import EstimateMenu from './EstimateMenu';
 import StatusMenu from './StatusMenu';
+import TagsMenu from './TagsMenu';
 
 type Props = {
   isOpen: boolean;
@@ -41,7 +43,7 @@ const TaskModal = ({
   const [assigneeId, setAssigneeId] = useState(initialInformation?.assigneeId);
 
   const [title, setTitle] = useState('');
-  const [pointEstimate, setPointEstimate] = useState<Estimate | undefined>(
+  const [pointEstimate, setPointEstimate] = useState<TaskEstimate | undefined>(
     initialInformation?.pointEstimate,
   );
 

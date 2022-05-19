@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
   styles: {
-    global: (props: any) => ({
+    global: () => ({
       'html, body': { color: 'neutral.100', backgroundColor: 'neutral.500' },
     }),
   },

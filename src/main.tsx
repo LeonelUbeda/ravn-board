@@ -1,15 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
 import {
   ApolloClient,
-  InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql,
   createHttpLink,
+  gql,
+  InMemoryCache,
+  useQuery,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+import App from './App';
 
 const httpLink = createHttpLink({
   uri: 'https://syn-api-prod.herokuapp.com/graphql',
@@ -17,7 +18,6 @@ const httpLink = createHttpLink({
 
 const authLink = setContext((_, { headers }) => {
   const token = import.meta.env.VITE_APOLLO_TOKEN;
-  console.log(token, 'token');
   return {
     headers: {
       ...headers,

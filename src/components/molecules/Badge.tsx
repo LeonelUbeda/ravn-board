@@ -1,7 +1,8 @@
-import badgeColorSchemes, { BadgeColor } from '@/constants/badgeColorSchemes';
 import Text from '@atoms/Text';
 import { Box, BoxProps, Icon, IconProps } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
+
+import badgeColorSchemes, { BadgeColor } from '@/constants/badgeColorSchemes';
 
 type Props = {
   upper?: boolean;

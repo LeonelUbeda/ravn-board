@@ -1,11 +1,12 @@
 import SidebarItem from '@atoms/SidebarItem';
 import Text from '@atoms/Text';
 import { Box, BoxProps, Image } from '@chakra-ui/react';
-import RavnLogo from '/images/icons/ravn-logo.svg';
 import { RiFunctionLine, RiMenuLine } from 'react-icons/ri';
-import { useLocation, matchPath } from 'react-router-dom';
+import { matchPath, useLocation } from 'react-router-dom';
 
-type Props = {} & BoxProps;
+import RavnLogo from '/images/icons/ravn-logo.svg';
+
+type Props = BoxProps;
 const Sidebar: React.FC<Props> = ({ children, ...props }) => {
   const { pathname } = useLocation();
   return (
