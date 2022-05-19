@@ -8,7 +8,7 @@ type Props = {
   isSelected?: boolean;
 } & BoxProps;
 
-const SidebarItem = ({ icon, children, _hover, isSelected, to, ...props }: Props) => {
+const SidebarItem = ({ icon, children, isSelected, to, ...props }: Props) => {
   return (
     <Box
       py="4"

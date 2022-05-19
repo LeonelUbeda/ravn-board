@@ -11,6 +11,7 @@ export default defineConfig({
       '@organism': resolve(__dirname, './src/components/organism'),
       '@pages': resolve(__dirname, './src/components/pages'),
       '@templates': resolve(__dirname, './src/components/templates'),
+      '@molecules': resolve(__dirname, './src/components/molecules'),
       '@icons': resolve(__dirname, './public/images/icons'),
       '@': resolve(__dirname, './src'),
     },

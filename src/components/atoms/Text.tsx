@@ -24,12 +24,12 @@ const variants = {
 };
 
 type Variants = keyof typeof variants;
-type Props = {
-  variant: Variants;
+export type Props = {
+  size: Variants;
 } & TextProps;
 
-const Text = ({ variant, ...props }: Props) => {
-  return <ChakraText {...variants[variant]} {...props} />;
+const Text = ({ size, ...props }: Props) => {
+  return <ChakraText {...variants[size]} {...props} />;
 };
 
 export default Text;

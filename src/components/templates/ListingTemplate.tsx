@@ -1,27 +1,34 @@
 import AddElementButton from '@atoms/AddElementButton';
-import { Box, HStack } from '@chakra-ui/react';
+import { Box, Grid, HStack } from '@chakra-ui/react';
 import Sidebar from '@organism/Sidebar';
 
 type Props = {
   children?: React.ReactNode;
+  onAddClick?: () => void;
 };
 
-const ListingTemplate: React.FC<Props> = ({ children }) => {
+const ListingTemplate: React.FC<Props> = ({ children, onAddClick }) => {
   return (
-    <HStack spacing="8" display="flex" height="100vh" alignItems="stretch" px="8" pt="8">
-      <Box maxWidth="300px" w="100%" pb="8">
-        <Sidebar maxWidth="300px" w="100%" h="full" />
-      </Box>
-      <Box w="full" height="100vh">
+    <Grid
+      templateColumns="245px auto"
+      columnGap="10"
+      height="100vh"
+      w="full"
+      maxH="100vh"
+      px="8"
+      py="8"
+    >
+      <Sidebar w="100%" h="full" />
+      <Box display="flex" flexDir="column">
         <Box h="48px" backgroundColor="neutral.400" rounded="2xl" w="full"></Box>
         <Box w="full" mt="9" display="flex">
-          <AddElementButton aria-label="test" ml="auto" />
+          <AddElementButton aria-label="test" ml="auto" onClick={onAddClick} />
         </Box>
-        <Box overflow="auto" height="400px" mt="5">
+        <Box mt="5" w="full" h="full">
           {children}
         </Box>
       </Box>
-    </HStack>
+    </Grid>
   );
 };
 
