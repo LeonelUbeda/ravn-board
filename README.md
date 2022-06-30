@@ -43,6 +43,9 @@ The components are organized following the guidelines of atomic design to be abl
 
 ![Delete task](https://i.imgur.com/d1WOFsj.png)
 
+### Full demostration
+[full demostration](https://user-images.githubusercontent.com/26783789/176605950-5a1c3ed0-f7d4-4d64-863d-e45f477294ec.webm)
+
 ## Installation and Setup Instructions
 
 Dependencies installation:
